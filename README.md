@@ -1,6 +1,6 @@
 # UCD_SISWEB_Course_Registerer
 
-A simple python script to monitor available seats for courses on ucd sisweb.
+A simple python script to monitor available seats for courses on ucd sisweb during open registration.
 
 
 Requirements: 
