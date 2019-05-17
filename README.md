@@ -11,7 +11,9 @@ Requirements:
 
 Usage: 
 
-  Single try:
+  *Input your login and class information in info.txt
+
+  Single run:
 
     python sisweb.py
   
