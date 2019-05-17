@@ -14,13 +14,10 @@ termmap = {
 
 username = lines[0].strip().replace(" ","")
 password = lines[1].strip().replace(" ","")
-
 term = lines[2].strip().replace(" ","")
 term = term[:4]+termmap[term[4:]]
-
 CRNs = lines[3].strip().split(" ")
 courses = [{"termCode":term, "course_number":x} for x in CRNs]
-print(courses)
 
 bas_url = "https://my.ucdavis.edu/schedulebuilder/"
 # login url
