@@ -25,6 +25,11 @@ with requests.Session() as session:
 	curtime = int(time.strftime("%H%M%S"))
 	
 	while(len(config.courses) > 0):
+		
+		if (curdate <= 5 and curtime <= 200000) or (curdate > 5 and curtime <= 100000):
+			print("Not during Open Registration Hours")
+			break
+		
 		# Get class info
 		site = session.get(config.url)
 		for d in config.courses:
@@ -42,11 +47,11 @@ with requests.Session() as session:
 					print("Failed to Register Class "+d["course_number"])
 
 		if len(config.courses) == 0:
+			print("All classes are registered")
 			break
 		if args.loop:
 			break
-		if (curdate <= 5 and curtime <= 200000) or (curdate > 5 and curtime <= 100000):
-			break
+
 		print("Try again in 2 seconds.")
 		time.sleep(2)
 
