@@ -1,0 +1,31 @@
+YOUR_USERNAME
+YOUR_PASSWORD
+2019 Fall Quarter
+40344
+
+
+
+
+#### Term Examples ####
+
+_YEAR_ Winter Semester
+_YEAR_ Winter Quarter
+_YEAR_ Spring Semester
+_YEAR_ Spring Quarter
+_YEAR_ Summer Session 1
+_YEAR_ Summer Special Session
+_YEAR_ Summer Session 2
+_YEAR_ Summer Quarter
+_YEAR_ Fall Semester
+_YEAR_ Fall Quarter
+
+
+#### CRN List Examples ####
+
+*to register for 1 courses (CRN: 12345):
+
+12345
+
+*to register for 3 courses (CRN: 12345, CRN: 67890, CRN: 22222):
+
+12345 67890 22222

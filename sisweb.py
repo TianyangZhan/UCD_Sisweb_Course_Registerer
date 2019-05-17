@@ -38,7 +38,6 @@ with requests.Session() as session:
 				if msg["Messages"]["DATA"][0][5] == "T": #msg["Messages"]["DATA"][0][3]
 					config.courses[:] = [x for x in config.courses if x["course_number"] != d["course_number"]]
 					print("Register Class "+d["course_number"]+" Successfully")
-
 				else:
 					print("Failed to Register Class "+d["course_number"])
 
