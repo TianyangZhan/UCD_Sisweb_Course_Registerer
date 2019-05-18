@@ -17,7 +17,7 @@ Usage:
 
     python sisweb.py
   
-  Loop during (20:00-0:00,M-F; 10:00-0:00,Weekends)
+  Loop run during (20:00-0:00, M-F;  10:00-0:00, Weekends)
     
     python sisweb.py --loop
     python sisweb.py -l
@@ -28,11 +28,11 @@ Email Settings:
    
    Possible error when sending email:
    
-    (535, b'5.7.8 Username and Password not accepted.)
+ (535, b'5.7.8 Username and Password not accepted.)
    
    Solution:
    
-    1. Log in to your ucd email
-    2. Go to [Google Account Settings](https://www.google.com/settings/security/lesssecureapps) and allow less secure apps access
+ 1. Log in to your ucd email
+ 2. Go to [Google Account Settings](https://www.google.com/settings/security/lesssecureapps) and allow less secure apps access
 
 
