@@ -5,19 +5,22 @@ import config
 
 
 def send_email(owner,password,target,subject='Hello',message="Hello World"):
-	server = smtplib.SMTP('smtp.gmail.com', 587)
-	server.ehlo()
-	server.starttls()
-	server.ehlo()
-	server.login(owner,password)
-	
-	#Send the mail
-	msg = MIMEText(message, 'plain')
-	msg['From'] = owner
-	msg['To'] = target
-	msg['Subject'] = subject
+	try:
+		server = smtplib.SMTP('smtp.gmail.com', 587)
+		server.ehlo()
+		server.starttls()
+		server.ehlo()
+		server.login(owner,password)
+		
+		#Send the mail
+		msg = MIMEText(message, 'plain')
+		msg['From'] = owner
+		msg['To'] = target
+		msg['Subject'] = subject
 
-	server.sendmail(owner, target, msg.as_string())
+		server.sendmail(owner, target, msg.as_string())
+	except:
+		print("Error Occured When Sending Email")
 
 
 
