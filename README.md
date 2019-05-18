@@ -13,11 +13,11 @@ A simple python script to monitor available seats for courses on ucd sisweb duri
 
   *Input your login and class information in info.txt
 
-  Single run:
+  *Single Run:*
 
     python sisweb.py
   
-  Loop run during (20:00-0:00, M-F;  10:00-0:00, Weekends)
+  *Run Forever During Interval (20:00-0:00, M-F;  10:00-0:00, Weekends)*
     
     python sisweb.py --loop
     python sisweb.py -l
@@ -26,7 +26,7 @@ A simple python script to monitor available seats for courses on ucd sisweb duri
     
    You will get an email from your own ucd email account.
    
-   Possible error when sending email:
+   *Possible error when sending email:*
    
  (535, b'5.7.8 Username and Password not accepted.)
    
