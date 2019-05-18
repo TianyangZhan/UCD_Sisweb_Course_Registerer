@@ -3,13 +3,13 @@
 A simple python script to monitor available seats for courses on ucd sisweb during open registration.
 
 
-Requirements: 
+**Requirements:**
 
     Python 3.x
     
     pip install -r requirements.txt
 
-Usage: 
+**Usage:**
 
   *Input your login and class information in info.txt
 
@@ -22,7 +22,7 @@ Usage:
     python sisweb.py --loop
     python sisweb.py -l
 
-Email Settings:
+**Email Settings:**
     
    You will get an email from your own ucd email account.
    
@@ -30,7 +30,7 @@ Email Settings:
    
  (535, b'5.7.8 Username and Password not accepted.)
    
-   Solution:
+   *Solution:*
    
  1. Log in to your ucd email
  2. Go to [Google Account Settings](https://www.google.com/settings/security/lesssecureapps) and allow less secure apps access
