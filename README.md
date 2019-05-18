@@ -26,9 +26,7 @@ A simple python script to monitor available seats for courses on ucd sisweb duri
     
    You will get an email from your own ucd email account.
    
-   *Possible error when sending email:*
-   
- (535, b'5.7.8 Username and Password not accepted.)
+   *Possible error when sending email:* (535, b'5.7.8 Username and Password not accepted.)
    
    *Solution:*
    
