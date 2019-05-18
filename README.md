@@ -28,11 +28,11 @@ Email Settings:
    
    Possible error when sending email:
    
-    smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8 http://support.google.com/mail/bin/answer.py?answer=14257\n5.7.8 {BADCREDENTIALS} s10sm9426107qam.7 - gsmtp')
+    (535, b'5.7.8 Username and Password not accepted.)
    
    Solution:
    
-        1. Log in to your ucd email
-        2. Go to https://www.google.com/settings/security/lesssecureapps and allow less secure apps access
+    1. Log in to your ucd email
+    2. Go to [Google Account Settings](https://www.google.com/settings/security/lesssecureapps) and allow less secure apps access
 
 
