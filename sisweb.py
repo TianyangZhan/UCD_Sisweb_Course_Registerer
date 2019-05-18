@@ -23,9 +23,9 @@ with requests.Session() as session:
 
 	curdate = int(datetime.datetime.today().weekday())
 	curtime = int(time.strftime("%H%M%S"))
-	
+
 	while(len(config.courses) > 0):
-		
+
 		if (curdate <= 5 and curtime <= 200000) or (curdate > 5 and curtime <= 100000):
 			print("Not during Open Registration Hours")
 			break
@@ -40,20 +40,23 @@ with requests.Session() as session:
 			if int(result["Results"]["DATA"][0][-3]) == 0:
 				r = session.get(config.bas_url+"addCourseRegistration.cfm?Term="+d["termCode"]+"&CourseCRNs="+d["course_number"]+"&Schedule=Schedule%201&WaitlistedFlags=N&Units="+unit+"&ShowDebug=0")
 				msg = r.json()
-				if msg["Messages"]["DATA"][0][5] == "T": #msg["Messages"]["DATA"][0][3]
-					config.courses[:] = [x for x in config.courses if x["course_number"] != d["course_number"]]
-					print("Register Class "+d["course_number"]+" Successfully")
-				else:
+				try:
+					if msg["Success"] != 1:
+						print("Already Registered Class "+d["course_number"])
+						config.courses[:] = [x for x in config.courses if x["course_number"] != d["course_number"]]
+					elif msg["RegistrationStatusCodes"]["DATA"][0][0] == "Registered":
+						config.courses[:] = [x for x in config.courses if x["course_number"] != d["course_number"]]
+						print("Register Class "+d["course_number"]+" Successfully")
+				except:
 					print("Failed to Register Class "+d["course_number"])
 
 		if len(config.courses) == 0:
 			print("All classes are registered")
 			break
-		if args.loop:
+		if not args.loop:
 			break
 
 		print("Try again in 2 seconds.")
 		time.sleep(2)
-
 
 

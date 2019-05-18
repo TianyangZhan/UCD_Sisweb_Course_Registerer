@@ -5,8 +5,8 @@ with open("info.txt") as f:
 	lines = [l for l in f.readlines() if l.strip()][:4]
 
 termmap = {
-			"WinterSemester":"01", "WinterQuarter":"02",
-			"SpringSemester":"03", "SpringQuarter":"04",
+			#"WinterSemester":"01", "WinterQuarter":"02", ## fix this
+			"SpringSemester":"02", "SpringQuarter":"03",
 			"SummerSession1":"05", "SummerSpecialSession":"06",
 			"SummerSession2":"07", "SummerQuarter":"08",
 			"FallSemester":"09", "FallQuarter":"10"
